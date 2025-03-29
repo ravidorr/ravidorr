@@ -1,0 +1,15 @@
+export PATH="${HOMEBREW_PREFIX}/opt/openssl/bin:$PATH"
+
+# User Aliases
+# It is helpful to have a single spot for all your aliases.
+if [ -f ${HOME}/.zsh_aliases ]; then
+  source ${HOME}/.zsh_aliases
+fi
+
+# User bin directory
+if [ -d "${HOME}/bin" ]; then
+  export PATH="${PATH}:${HOME}/bin"
+fi
+
+# go setup
+export GOPATH="${HOME}/dev/gopath"
